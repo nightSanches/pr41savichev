@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Main">
 
-    <Grid Background="#FFE8E100" DataContext="{Binding Stopwatch}">
+    <Grid Background="#FFE8E100" DataContext="{Binding StopWatch}">
         <Label Foreground="White" FontSize="48" Content="{Binding Timer, UpdateSourceTrigger=PropertyChanged}"
            Margin="115,10,10,10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <ListBox Grid.Column="0" ItemsSource="{Binding Interval}" Margin="10,70,0,10" HorizontalAlignment="Left" Width="100">
@@ -20,6 +20,7 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        
         <Button Content="{Binding TextButton, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left"
             VerticalAlignment="Top" Width="100" Height="25" Background="White" Margin="10,10,0,0"
             Command="{Binding StartTimer}"/>
