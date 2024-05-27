@@ -6,7 +6,7 @@ using System.Text;
 using Stopwatch = pr41savichev.Modell.Stopwatch;
 using System.Windows.Threading;
 
-namespace pr41savichev.View
+namespace pr41savichev.ViewModell
 {
     public class VMStopwatch : INotifyPropertyChanged
     {
@@ -14,7 +14,7 @@ namespace pr41savichev.View
 
         private DispatcherTimer Timer = new DispatcherTimer()
         {
-            Interval = new System.TimeSpan(0, 0, 1)
+            Interval = new TimeSpan(0, 0, 1)
         };
 
         public VMStopwatch()
@@ -24,9 +24,9 @@ namespace pr41savichev.View
             Timer.Start();
         }
 
-        private void Timer_Tick(object sender, System.EventArgs e)
+        private void Timer_Tick(object sender, EventArgs e)
         {
-            if (StopWatch.Work) 
+            if (StopWatch.Work)
                 StopWatch.Time++;
         }
 
