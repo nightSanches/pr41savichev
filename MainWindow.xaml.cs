@@ -23,6 +23,7 @@ namespace pr41savichev
         public MainWindow()
         {
             InitializeComponent();
+            frame.Navigate(new View.Main());
         }
     }
 }
